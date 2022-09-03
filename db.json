@@ -33,6 +33,60 @@
       "services": [],
       "junior": "teste",
       "id": 3
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 5
+    },
+    {
+      "name": "teste 10",
+      "budget": "15000",
+      "category": {
+        "id": "3",
+        "name": "Designer"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 6
+    },
+    {
+      "name": "dfghs",
+      "budget": "5563456",
+      "category": {
+        "id": "3",
+        "name": "Designer"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 7
+    },
+    {
+      "name": "hj,fhjk",
+      "budget": "777777",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 8
+    },
+    {
+      "name": "tyhswrty",
+      "budget": "6565656",
+      "category": {
+        "id": "3",
+        "name": "Designer"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 9
     }
   ],
   "categories": [
