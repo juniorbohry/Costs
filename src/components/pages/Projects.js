@@ -1,19 +1,44 @@
 import { useLocation } from 'react-router-dom'
 import Container from '../layout/Container'
+import Loading from '../layout/Loading'
 import Message from '../layout/Message'
 import LinkButton from '../layout/LinkButton'
 import styles from './Projects.module.css'
+import ProjectCard from '../project/ProjectCard'
+import { useEffect, useState } from 'react'
 
 
 
 
 function Projects() {
+    const [projects, setProjects] = useState([])
+    const [removeloading, setRemoveLoading] = useState(false)
+
+
     const location = useLocation()
     let message = ''
 
     if(location.state) {
         message =  location.state.message
     }
+
+    useEffect(() => {
+        setTimeout(() => {     //para simular o carregamento do banco de dados e aparecer a pagina de loading
+            fetch('http://localhost:5000/projects', {
+                method: 'Get',
+                headers: {
+                    'content-type': 'application/json'
+                }
+            }).then(resp => resp.json())
+            .then(data => {
+                console.log(data)
+                setProjects(data)
+                setRemoveLoading(true)
+            })
+            .catch(err => console.log(err)) 
+            
+        }, 300);    
+    }, [])
 
     return (
         <div className={styles.project_container}>
@@ -27,7 +52,20 @@ function Projects() {
             {message && <Message type="success" msg={message} />}
 
             <Container customClass="start">
-                <p>Projetos...</p>
+                {projects.length > 0 &&     //para verificar se existe projeto no banco de dados
+                projects.map((project) => (
+                    <ProjectCard 
+                    id={project.id}
+                    name={project.name}
+                    budge={project.budge}
+                    category={project.category.name}
+                    key={project.id}
+                    />
+                ))}
+                {!removeloading && <Loading />}
+                {removeloading && projects.length === 0 && (
+                <p>Não há projetos cadastrados!</p>
+                )}
             </Container>
 
         </div>

@@ -1,107 +1,48 @@
 {
   "projects": [
     {
-      "name": "dfgsdfg",
-      "budget": "65443",
+      "name": "teste 1",
+      "budget": "5000",
       "category": {
-        "id": "3",
-        "name": "Designer"
+        "id": "1",
+        "name": "Infra"
       },
       "cost": 0,
       "services": [],
       "id": 1
     },
     {
-      "name": "fdgfdg",
-      "budget": "564365",
+      "name": "teste 2",
+      "budget": "6000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "3",
+        "name": "Design"
       },
       "cost": 0,
       "services": [],
       "id": 2
     },
     {
-      "name": "Junior Bohry",
-      "budget": "6556565",
+      "name": "teste 3",
+      "budget": "6000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 0,
       "services": [],
-      "junior": "teste",
       "id": 3
     },
     {
+      "name": "Junior Bohry01",
+      "budget": "60000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
       "cost": 0,
       "services": [],
       "id": 4
-    },
-    {
-      "cost": 0,
-      "services": [],
-      "id": 5
-    },
-    {
-      "name": "teste 10",
-      "budget": "15000",
-      "category": {
-        "id": "3",
-        "name": "Designer"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 6
-    },
-    {
-      "name": "dfghs",
-      "budget": "5563456",
-      "category": {
-        "id": "3",
-        "name": "Designer"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 7
-    },
-    {
-      "name": "hj,fhjk",
-      "budget": "777777",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 8
-    },
-    {
-      "name": "tyhswrty",
-      "budget": "6565656",
-      "category": {
-        "id": "3",
-        "name": "Designer"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 9
-    },
-    {
-      "cost": 0,
-      "services": [],
-      "id": 10
-    },
-    {
-      "cost": 0,
-      "services": [],
-      "id": 11
-    },
-    {
-      "cost": 0,
-      "services": [],
-      "id": 12
     }
   ],
   "categories": [
@@ -115,7 +56,7 @@
     },
     {
       "id": 3,
-      "name": "Designer"
+      "name": "Design"
     },
     {
       "id": 4,
