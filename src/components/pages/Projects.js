@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react'
 function Projects() {
     const [projects, setProjects] = useState([])
     const [removeloading, setRemoveLoading] = useState(false)
+    const [projectMessage, setProjectMessage] = useState('')
 
 
     const location = useLocation()
@@ -40,6 +41,21 @@ function Projects() {
         }, 300);    
     }, [])
 
+    function removeProject(id) {
+        fetch(`http://localhost:5000/projects/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }).then(resp => resp.json())
+        .then(() => {
+            setProjects(projects.filter((project) => project.id !== id))
+            setProjectMessage('Projeto removido com sucesso!')
+        })
+        .catch(err => console.log(err))
+
+    }
+
     return (
         <div className={styles.project_container}>
             <div className={styles.title_container}>
@@ -50,6 +66,7 @@ function Projects() {
             </div>
 
             {message && <Message type="success" msg={message} />}
+            {projectMessage && <Message type="success" msg={projectMessage} />}
 
             <Container customClass="start">
                 {projects.length > 0 &&     //para verificar se existe projeto no banco de dados
@@ -60,6 +77,7 @@ function Projects() {
                     budge={project.budge}
                     category={project.category.name}
                     key={project.id}
+                    handleRemove= {removeProject}
                     />
                 ))}
                 {!removeloading && <Loading />}
