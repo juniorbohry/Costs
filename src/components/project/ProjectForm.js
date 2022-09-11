@@ -1,8 +1,8 @@
+import styles from './ProjectForm.module.css'
 import { useEffect, useState } from 'react'
 import Input from '../form/Input'
 import Select from '../form/Select'
 import SubmitButton from '../form/SubmitButton'
-import styles from './ProjectForm.module.css'
 
 function ProjectForm({handleSubmit, btnText, projectData}) {
     const [categories, setCategories] = useState([])
@@ -29,7 +29,6 @@ function ProjectForm({handleSubmit, btnText, projectData}) {
 
     function handleChange(e) {
         setProject({...project, [e.target.name]: e.target.value})
-        
     }
 
     function handleCategory(e) {
@@ -38,9 +37,7 @@ function ProjectForm({handleSubmit, btnText, projectData}) {
             name: e.target.options[e.target.selectedIndex].text
             }
         })
-        
     }
-
 
     return(
         <form onSubmit={submit} className={styles.form}>
