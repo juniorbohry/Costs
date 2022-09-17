@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 
 function Projects() {
     const [projects, setProjects] = useState([])
-    const [removeloading, setRemoveLoading] = useState(false)
+    const [removeLoading, setRemoveLoading] = useState(false)
     const [projectMessage, setProjectMessage] = useState('')
 
     const location = useLocation()
@@ -23,13 +23,12 @@ function Projects() {
     useEffect(() => {
         setTimeout(() => {     //para simular o carregamento do banco de dados e aparecer a pagina de loading
             fetch('http://localhost:5000/projects', {
-                method: 'Get',
+                method: 'GET',
                 headers: {
-                    'content-type': 'application/json'
-                }
+                    'Content-Type': 'application/json'
+                },
             }).then(resp => resp.json())
             .then(data => {
-                console.log(data)
                 setProjects(data)
                 setRemoveLoading(true)
             })
@@ -67,14 +66,14 @@ function Projects() {
                     <ProjectCard 
                     id={project.id}
                     name={project.name}
-                    budge={project.budge}
+                    budget={project.budget}
                     category={project.category.name}
                     key={project.id}
                     handleRemove= {removeProject}
                     />
                 ))}
-                {!removeloading && <Loading />}
-                {removeloading && projects.length === 0 && (
+                {!removeLoading && <Loading />}
+                {removeLoading && projects.length === 0 && (
                     <p>Não há projetos cadastrados!</p>
                 )}
             </Container>
