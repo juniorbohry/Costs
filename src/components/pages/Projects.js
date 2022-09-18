@@ -16,13 +16,16 @@ function Projects() {
 
     let message = ''
 
+    const devEnv = process.env.NODE_ENV !== 'PROD'
+    const { REACT_APP_DEV_URL, REACT_APP_PROD_URL } = process.env
+
     if(location.state) {
         message =  location.state.message
     }
 
     useEffect(() => {
         setTimeout(() => {     //para simular o carregamento do banco de dados e aparecer a pagina de loading
-            fetch('http://localhost:5000/projects', {
+            fetch(`${devEnv ? REACT_APP_DEV_URL : REACT_APP_PROD_URL}/projects`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
