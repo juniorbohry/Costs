@@ -1,3 +1,5 @@
+A completa renderização desse projeto depende de requisições feitas por meio do fetch-> json-Server(lib), por isso é necessario startar o script: "npm run backend"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
