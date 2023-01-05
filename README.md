@@ -1,11 +1,6 @@
 <<<<<<< HEAD
 # Costs
 "Costs" é uma aplicação web desenvolvida durante o curso de React.js do professor Matheus Battisti. Ela foi projetada para auxiliar no gerenciamento de custos e serviços de um projeto, sendo possível realizar registros, atualizações e remoção de projetos e serviços no arquivo db.json com o auxílio da biblioteca Json server.
-=======
-A completa renderização desse projeto depende de requisições feitas por meio do fetch-> json-Server(lib), por isso é necessario startar o script: "npm run backend"
-
-# Getting Started with Create React App
->>>>>>> 8efd3abc5f9669727938ae8bd42319b24ca4bb95
 
 # Layouts
 ## Home
