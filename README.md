@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Costs
 "Costs" é uma aplicação web desenvolvida durante o curso de React.js do professor Matheus Battisti. Ela foi projetada para auxiliar no gerenciamento de custos e serviços de um projeto, sendo possível realizar registros, atualizações e remoção de projetos e serviços no arquivo db.json com o auxílio da biblioteca Json server.
 
@@ -6,7 +5,7 @@
 ## Home
 ![home](https://github.com/juniorbohry/Assets/blob/main/costs/home.png)
 
-## Criar projeto
+## Criação de projeto
 ![cadastro de projeto](https://github.com/juniorbohry/Assets/blob/main/costs/cadastro%20de%20projeto.png)
 
 ## Lista de projetos
