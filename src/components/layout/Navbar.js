@@ -10,7 +10,6 @@ function Navbar() {
                 <Link to="/">
                     <img src={logo} alt="Costs"/>
                 </Link>
-
                 <ul className={styles.list}>
                     <li className={styles.item}>
                         <Link to="/">Home</Link>

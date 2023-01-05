@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "name": "Projeto teste",
+      "name": "Teste 01",
       "budget": "3500",
       "category": {
         "id": "2",
@@ -45,6 +45,17 @@
       "cost": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "name": "Teste 04",
+      "budget": "10000",
+      "cost": 0,
+      "services": [],
+      "id": 4
     }
   ],
   "categories": [
